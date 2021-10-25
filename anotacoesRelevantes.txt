@@ -1,0 +1,66 @@
+ 
+    CREATE TABLE usuario(
+        nome VARCHAR(60),
+        email VARCHAR(100),
+        idade INT
+    );
+
+
+    INSERT INTO usuario(nome, email, idade) VALUES(
+        "Wender Augusto Vega",
+        "wender_vega@hotmail.com",
+        24
+    )
+
+
+    mysql -h localhost -u root -p // depois disso ele pede a senha
+
+SHOW DATABASES // ver banco de dados
+
+CREATE DATABASE 'nome do banco de dados'; // criar banco de dados
+
+USE 'nomde do banco de dados';
+ // entra no banco de dados
+
+SHOW TABLES; //mosta as tabelas existentes
+
+CREATE TABLE usuario(
+   nome VARCHAR(60),
+   email VARCHAR(100),
+   idade INT(3)
+); // essa é a sintaxe para criação de atributos para a tabela
+
+DESCRIBE 'nome da tabela'; // mostra os atributos da tabela
+
+
+INSERT INTO usuario(nome, email, idade) VALUES(
+        "vagner Augusto Vega",
+        "david_vega@hotmail.com",
+        20
+    );
+
+
+SELECT * 'asteristico significa all' FROM 'e o nome da tabela'
+
+para selecionar dados especificos é usado o where como por exemlo:
+
+DELETE FROM usuario 'nome da tabela' WHERE nome = "o atributo se for string que seja dito entre aspas"
+
+SELECT * FROM cadastro where idade >=18
+
+UPDATE usuario SET nome = "nome aqui" WHERE 'nome antigo'
+
+
+
+INSERT INTO postagems(titulo, conteudo) VALUES(
+    'Teste manual',
+    'conteudo manual'
+    );
+
+ 
+// Como usar o handlebars 
+ //Config
+// template Engine
+app.engine("handlebars", handlebars({ defautLayout: "main" }));
+app.set("view engine", "handlebars");
+necessario criar pasta raiz com nome de 'views' e dentro de views 'layouts' dentro de layouts arquivo chamado main.handlebars com {{{body}}} dentro do body e dentro de views o nome do arquivo que quer renderizar dentro do body com o nome dele .handlebars
